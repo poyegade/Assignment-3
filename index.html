@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123c2d">
+  <title>Soccer Team Manager</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="page-header">
+      <p class="eyebrow">TEAM TOOLKIT</p>
+      <h1>Soccer Team Manager</h1>
+      <p class="intro">Build your squad. Get ready for match day.</p>
+    </header>
+
+    <div class="team-layout">
+      <section class="panel add-panel" aria-labelledby="add-player-title">
+        <div class="section-heading">
+          <span class="step-number" aria-hidden="true">01</span>
+          <div>
+            <h2 id="add-player-title">Add a player</h2>
+            <p>Add players to your team roster.</p>
+          </div>
+        </div>
+        <form id="player-form">
+          <label for="player-name">Player name</label>
+          <div class="input-row">
+            <input
+              id="player-name"
+              name="player-name"
+              type="text"
+              placeholder="e.g. Alex Morgan"
+              autocomplete="name"
+              maxlength="60"
+              required
+            >
+            <button type="submit">Add Player</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="panel roster-panel" aria-labelledby="roster-title">
+        <div class="roster-heading">
+          <div class="section-heading">
+            <span class="step-number" aria-hidden="true">02</span>
+            <div>
+              <h2 id="roster-title">Player roster</h2>
+              <p>Your squad, all in one place.</p>
+            </div>
+          </div>
+          <span class="player-count" id="player-count" aria-live="polite">0 players</span>
+        </div>
+        <ul class="roster-list" id="player-list" aria-label="Team players">
+          <li class="empty-state" id="empty-state">
+            <span class="empty-icon" aria-hidden="true">+</span>
+            <span>No players yet. Add your first player above.</span>
+          </li>
+        </ul>
+      </section>
+    </div>
+    <footer>One team. One goal.</footer>
+  </main>
+</body>
+</html>
